@@ -1,0 +1,189 @@
+header {
+    .navbar {
+        padding-top: 20px;
+        background-color: $page-bg-color;
+        border: none;
+        box-shadow: 0 1px 2px $nav-gray-border;
+
+        .logo {
+            color: $gray-darker;
+            font-family: $font-family-lucida-sans-unicode;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 11px;
+            word-spacing: -1px;
+            letter-spacing: -0.5px;
+
+            span {
+                font-size: 12px;
+                font-weight: 500;
+                text-transform: uppercase;
+                font-family: "Lucida Console", Monaco, monospace;
+                letter-spacing: 2.1px;
+                margin-left: 1px;
+            }
+
+            &:hover {
+              text-decoration: none;
+            }
+        }
+
+        .navbar-nav {
+            li {
+                font-family: $font-family-lucida-grande;
+
+                &.active {
+                    font-weight: 600;
+                }
+
+                &.dropdown {
+                    a:focus {
+                        color: rgba(0,0,0,0.6);
+                    }
+
+                    a:hover {
+                        color: $gray-darker;
+                    }
+
+                    &.open a {
+                        background-color: $page-bg-color;
+                    }
+
+                    .dropdown-menu {
+                        background: #ffffff;
+                    }
+                }
+
+                a {
+                    color: rgba(0,0,0,0.6);
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: $grid-float-breakpoint) {
+    header .navbar .navbar-nav {
+        li {
+            &.active {
+                margin-bottom: -2px;
+                border-bottom: 2px solid $gray-darker;
+
+                &:hover {
+                    a {
+                        background-color: $page-bg-color;
+                    }
+                }
+
+                a {
+                    background-color: $page-bg-color;
+                }
+            }
+
+            &.dropdown {
+                .dropdown-menu {
+                    border-radius: 5px;
+                    background: #ffffff;
+                    border: 1px solid $gray-lighter;
+                    margin-top: -3px;
+
+                    &:after, &:before {
+                        bottom: 100%;
+                        left: 50%;
+                        border: solid transparent;
+                        content: " ";
+                        height: 0;
+                        width: 0;
+                        position: absolute;
+                        pointer-events: none;
+                    }
+
+                    &:after {
+                        border-color: rgba(255, 255, 255, 0);
+                        border-bottom-color: #ffffff;
+                        border-width: 10px;
+                        margin-left: 14px;
+                    }
+
+                    &:before {
+                        border-color: rgba(194, 225, 245, 0);
+                        border-bottom-color: $gray-lighter;
+                        border-width: 11px;
+                        margin-left: 13px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: $grid-float-breakpoint) {
+    .navbar-header {
+        padding-left: 15px;
+    }
+
+    header .navbar {
+        .navbar-toggle {
+            border-color: #fff;
+            margin-top: 0;
+            margin-bottom: 16px;
+
+            &:focus, &:hover {
+                background-color: #f9f9f9;
+                border-color: #f9f9f9;
+            }
+
+            .icon-bar {
+                background-color: $gray-darker;
+            }
+        }
+
+        .navbar-collapse {
+            box-shadow: 0 1px 2px $nav-gray-border;
+            background-color: $gray-lightest;
+
+            .navbar-nav {
+                background-color: $gray-lightest;
+                margin-top: 0;
+                margin-bottom: 0;
+
+                li {
+                    &:not(.dropdown):not(:last-child) {
+                        border-bottom: 1px solid $nav-gray-border;
+                    }
+
+                    &.active {
+                        &:hover {
+                            a {
+                                background-color: $gray-lightest;
+                            }
+                        }
+
+                        a {
+                            background-color: $gray-lightest;
+                        }
+                    }
+
+                    &.dropdown.open {
+                        a, .dropdown-menu {
+                            background-color: $gray-lightest;
+                        }
+
+                        .dropdown-menu {
+                            padding: 0;
+                            border-top: 1px solid $nav-gray-border;
+
+                            a {
+                                padding-top: 10px;
+                                padding-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
