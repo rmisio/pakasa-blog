@@ -1,16 +1,27 @@
+$nav-background-color: rgba(255,255,255,0.97);
+
 header {
     .navbar {
         padding-top: 20px;
         background-color: $page-bg-color;
+        background-color: $nav-background-color;
         border: none;
         box-shadow: 0 1px 2px $nav-gray-border;
+
+        &.affixed {
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            right: 0;
+        }
 
         .logo {
             color: $gray-darker;
             font-family: $font-family-lucida-sans-unicode;
             font-size: 24px;
             font-weight: 600;
-            line-height: 11px;
+            display: inline-block;
+            line-height: 16px;
             word-spacing: -1px;
             letter-spacing: -0.5px;
 
@@ -46,11 +57,11 @@ header {
                     }
 
                     &.open a {
-                        background-color: $page-bg-color;
+                        background-color: transparent;
                     }
 
                     .dropdown-menu {
-                        background: #ffffff;
+                        background: $nav-background-color;
                     }
                 }
 
@@ -74,19 +85,19 @@ header {
 
                 &:hover {
                     a {
-                        background-color: $page-bg-color;
+                        background-color: transparent;
                     }
                 }
 
                 a {
-                    background-color: $page-bg-color;
+                    background-color: transparent;
                 }
             }
 
             &.dropdown {
                 .dropdown-menu {
                     border-radius: 5px;
-                    background: #ffffff;
+                    background: $nav-background-color;
                     border: 1px solid $gray-lighter;
                     margin-top: -3px;
 
