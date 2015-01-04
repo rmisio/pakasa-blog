@@ -1,6 +1,8 @@
 (function($) {
     var $mainNavbar = $('header .navbar'),
-        scrollPos = $(document).scrollTop();
+        mainNavbar = $mainNavbar.outerHeight(true),
+        scrollPos = $(document).scrollTop(),
+        $body = $('body');
 
     // Affix main navbar when scrolling down
     $(window).scroll(
@@ -13,11 +15,14 @@
                 if (scrollPos < prevScrollPos) {
                     $mainNavbar.addClass('affixed');
                 } else {
+                    $body.css('padding-top', '');
                     $mainNavbar.removeClass('affixed');
                 }
+            } else if (scrollPos === 0) {
+                $mainNavbar.removeClass('affixed');
             }
 
-        }, 250)
+        }, 100)
     );
 
 })(jQuery);
