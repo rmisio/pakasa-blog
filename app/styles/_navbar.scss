@@ -21,9 +21,9 @@ header.main {
 
         .logo {
             color: $gray-darker;
-            font-family: $font-family-lucida-sans-unicode;
+            font-family: $font-family-raleway;
             font-size: 24px;
-            font-weight: 600;
+            font-weight: 700;
             display: inline-block;
             line-height: 16px;
             word-spacing: -1px;
@@ -31,10 +31,9 @@ header.main {
 
             span {
                 font-size: 12px;
-                font-weight: 500;
+                font-weight: 400;
                 text-transform: uppercase;
-                font-family: "Lucida Console", Monaco, monospace;
-                letter-spacing: 2.1px;
+                letter-spacing: 1.6px;
                 margin-left: 1px;
             }
 

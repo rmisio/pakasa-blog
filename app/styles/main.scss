@@ -18,8 +18,7 @@ $nav-gray-border: rgba(0,0,0,0.05);
 
 // fonts
 $font-family-lucida-grande: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
-$font-family-lucida-sans-unicode: 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
-$font-family-pontano-sans: 'Pontano Sans', sans-serif;
+$font-family-raleway: 'Raleway', sans-serif;
 $font-family-merriweather: 'Merriweather', serif;
 $font-family-base: $font-family-merriweather;
 $font-family-headings: $font-family-lucida-grande;
@@ -105,12 +104,13 @@ figure {
         time {
             color: $gray-light;
             font-size: 13px;
-            font-family: $font-family-pontano-sans;
+            font-family: $font-family-merriweather;
             display: block;
         }
 
         h2 {
-            margin: 3px 0 10px;
+            margin-bottom: 10px;
+            margin-top: 0;
 
             a {
                 font-weight: bold;
@@ -121,7 +121,7 @@ figure {
         .content {
             font-size: 18px;
             font-weight: 300;
-            font-family: $font-family-pontano-sans;
+            font-family: $font-family-merriweather;
             display: block;
             margin-bottom: 10px;
         }
