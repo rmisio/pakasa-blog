@@ -49,6 +49,8 @@ header.main {
 
                 &.active {
                     font-weight: 600;
+
+                    a { color: $gray-darker; }
                 }
 
                 &.dropdown {
@@ -74,6 +76,10 @@ header.main {
                     font-size: 11px;
                     text-transform: uppercase;
                     letter-spacing: 1px;
+
+                    &:hover {
+                        color: $gray-darker;
+                    }
                 }
             }
         }
@@ -81,7 +87,7 @@ header.main {
 }
 
 @media (min-width: $grid-float-breakpoint) {
-    header .navbar .navbar-nav {
+    header.main .navbar .navbar-nav {
         li {
             &.active {
                 margin-bottom: -2px;
@@ -140,7 +146,7 @@ header.main {
         padding-left: 15px;
     }
 
-    header .navbar {
+    header.main .navbar {
         .navbar-toggle {
             border-color: #fff;
             margin-top: 0;
