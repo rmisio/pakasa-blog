@@ -78,8 +78,12 @@ figure {
     }
 }
 
-.img-responsive {
+.defer-image {
     margin: 0 auto;
+}
+
+.index-main-container {
+    max-width: 970px;
 }
 
 .blog-post-previews {
@@ -133,11 +137,6 @@ figure {
             }
         }
     }
-}
-
-.sidebar {
-    background-color: green;
-    height: 3000px;
 }
 
 .blog-post-page {
