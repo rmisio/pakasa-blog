@@ -1,0 +1,165 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+// colors
+$gray-darker: #333;
+$gray-dark: #010101;
+$gray-light: #afafaf;
+$gray-lighter: #ccc;
+$gray-lightest: #fafafa;
+$green: #57AD68;
+$brand-primary: $green;
+$page-bg-color: white;
+$link-color: $brand-primary;
+$text-color: #3C3C3C;
+$nav-gray-border: rgba(0,0,0,0.05);
+
+// fonts
+$font-family-lucida-grande: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
+$font-family-raleway: 'Raleway', sans-serif;
+$font-family-merriweather: 'Merriweather', serif;
+$font-family-base: $font-family-merriweather;
+$font-family-headings: $font-family-lucida-grande;
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-headings;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 55px;
+    margin-bottom: 30px;
+    letter-spacing: -2.5px;
+}
+
+h2 {
+    font-weight: bold;
+    letter-spacing: -0.7px;
+    font-size: 32px;
+}
+
+h3 {
+    font-size: 28px;
+    letter-spacing: -0.6px;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding-bottom: 20px;
+  font-family: $font-family-base;
+  background-color: $page-bg-color;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+a:focus, a:hover {
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: 25px;
+}
+
+figure {
+    margin-bottom: 25px;
+
+    figcaption {
+        margin-top: 20px;
+    }
+}
+
+.defer-image {
+    margin: 0 auto;
+}
+
+.index-main-container {
+    max-width: 970px;
+}
+
+.blog-post-previews {
+    padding-top: 25px;
+
+    article {
+        border-top: 1px solid $nav-gray-border;
+        padding: 25px 0;
+
+        &:first-child {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        a {
+            color: $gray-darker;
+        }
+
+        time {
+            color: $gray-light;
+            font-size: 13px;
+            font-family: $font-family-merriweather;
+            display: block;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            margin-top: 0;
+
+            a {
+                font-weight: bold;
+                font-size: 22px;
+            }
+        }
+
+        .content {
+            font-size: 18px;
+            font-weight: 300;
+            font-family: $font-family-merriweather;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .img-thumb {
+            float: right;
+            margin: 8px 0 0 22px;
+
+            img {
+                width: 140px;
+                height: 120px;
+                border: 1px solid $gray-lighter;
+            }
+        }
+    }
+}
+
+.blog-post-page {
+    .blog-post {
+        h1 {
+            margin-top: 30px;
+        }
+    }
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) {
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) {
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: $screen-lg-min) {
+}
+
+@import "_navbar.scss";
