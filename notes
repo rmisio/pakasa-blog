@@ -1,0 +1,21 @@
+// build for pakasa sub-domain deploy
+1.) rm -rf dist
+2.) cp -r app dist
+3.) cp -r bower_components/ dist/lib/
+4.) search and replace in html files
+bower_components
+lib
+5.) search and replace in html files
+="lib
+="/lib
+6.) reg_ex search and replace in html files
+="/([^/])
+="/pakasa-blog/\1
+7.) search and replace in html files
+href="styles
+href="/pakasa-blog/styles
+8.) cp .tmp/styles/main.css dist/styles/
+9.) in main.css
+-- a.) search and replace
+---- ../bower_components/
+---- ../lib/
