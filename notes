@@ -19,3 +19,4 @@ href="/pakasa-blog/styles
 -- a.) search and replace
 ---- ../bower_components/
 ---- ../lib/
+10.) git subtree push --prefix dist origin gh-pages
