@@ -2,6 +2,7 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
 // bower:scss
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
+@import "_defer-image.scss";
 
 // colors
 $gray-darker: #333;
@@ -75,10 +76,6 @@ figure {
     figcaption {
         margin-top: 20px;
     }
-}
-
-.defer-image {
-    margin: 0 auto;
 }
 
 .index-main-container {

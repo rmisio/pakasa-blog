@@ -1,54 +1,29 @@
 (function($) {
-    var $mainNavbar = $('header .navbar'),
-        mainNavbar = $mainNavbar.outerHeight(true),
-        scrollPos = $(document).scrollTop(),
-        $body = $('body');
-
-    // Affix main navbar when scrolling down
-    $(window).scroll(
-        _.throttle(function() {
-            prevScrollPos = scrollPos;
-            scrollPos = $(document).scrollTop();
-
-            if (scrollPos > 150) {
-                // if scrolling up else scrolling down
-                if (scrollPos < prevScrollPos) {
-                    $mainNavbar.addClass('affixed');
-                } else {
-                    $body.css('padding-top', '');
-                    $mainNavbar.removeClass('affixed');
-                }
-            } else if (scrollPos === 0) {
-                $mainNavbar.removeClass('affixed');
-            }
-
-        }, 100)
-    );
-
-    // defer image functionality
+    // Defer Image functionality is based off the following:
+    // http://maketea.co.uk/2013/05/04/responsive-image-placeholders.html
+    //
+    // The idea is to provide a "placeholder" that takes the place of a responsive image
+    // until the image is fully loaded and thereby avoiding the page from jumping
+    // upon image load.
     $('.defer-image').each(function(i, el) {
         var $el = $(this),
             img = new Image(),
-            $placeholder = $el.find(':first-child'),
-            imgH = $el.data('imgH'),
-            imgW = $el.data('imgW');
-
-        if (!(imgH && imgW)) {
-            throw new Error('Please provide the image dimensions as data-img-h and data-img-w attributes on the .defer-image element.');
-        }
-
-        $el.css({
-            maxHeight: imgH,
-            maxWidth: imgW
-        });
-        $placeholder.css('padding-top', (imgH / imgW * 100) + '%');
-        $el.addClass('loading');
+            $placeholder = $el.find(':first-child');
 
         img.onload = function () {
             $el.toggleClass('loading loaded');
             $placeholder.replaceWith(img);
         }
 
+        // any 'data-' attributes that are on the placeholder will
+        // be placed on the image without the 'data-' preface. For
+        // example, the following placeholder:
+        //
+        // <div data-class="img-responsive" data-src="/images/construction.jpg"></div>
+        //
+        // will result in the following image tag:
+        //
+        // <img class="img-responsive" src="/images/construction.jpg">
         for (var i = 0; i < $placeholder[0].attributes.length; i++) {
             var attr = $placeholder[0].attributes[i];
 
