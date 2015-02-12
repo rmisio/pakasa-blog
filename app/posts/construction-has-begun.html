@@ -69,8 +69,15 @@
         </nav>
     </header>
 
-    <div class="defer-image" data-img-w="2385" data-img-h="789">
-        <div data-class="main-img img-responsive" data-src="/images/construction-header.jpg"></div>
+    <!--
+        For more info about Deferred Images, please see main.js. Be sure to include the relevant
+        .image-ratio:?x? class (see _defer-image.scss) on the .defer-image element based off of
+        the aspect ratio of the image. If your aspect ratio is not represented, you can add an inline
+        padding-top style to the inner div equal to h / w * 100 (as shown below).
+    -->
+    <div class="defer-image">
+        <div data-class="main-img img-responsive" data-src="/images/construction-header.jpg"
+            style="padding-top: 33%"></div>
     </div>
     <div class="container">
         <div class="row">
@@ -86,7 +93,18 @@
                         Ut sit amet rhoncus magna, facilisis cursus metus. Maecenas odio quam, rutrum eget libero non, hendrerit vulputate neque. Cras posuere est vel magna laoreet, sed condimentum lacus suscipit. Donec non felis rhoncus, ornare ante ornare, mattis ante. Ut turpis ligula, pharetra ut aliquet luctus, facilisis eu risus. Vestibulum in laoreet sem. Quisque id semper ipsum. Aliquam aliquet massa diam, in fringilla libero tincidunt vel.
                     </p>
                     <figure>
-                        <div class="defer-image" data-img-w="719" data-img-h="476">
+                        <!-- 714 -->
+                        <!-- data-img-w="719" data-img-h="476" -->
+
+                        <!--
+                            For more info about Deferred Images, please see main.js. Be sure to include the
+                            relevant .image-ratio:?x? class (see _defer-image.scss) on the .defer-image
+                            element based off of the aspect ratio of the image.
+                            If the natural width of the image is smaller than its container when in the
+                            largest layout (desktop), add a max-width inline style to the .defer-image
+                            element as shown below.
+                        -->
+                        <div class="defer-image image-ratio:3x2" style="max-width: 719px">
                             <div data-class="img-responsive" data-src="/images/construction.jpg"></div>
                         </div>
                         <figcaption>

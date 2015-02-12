@@ -69,8 +69,15 @@
         </nav>
     </header>
 
-    <div class="defer-image" data-img-w="1000" data-img-h="535">
-        <div data-class="main-img img-responsive" data-src="/images/rendering.jpg"></div>
+    <!--
+        For more info about Deferred Images, please see main.js. Be sure to include the relevant
+        .image-ratio:?x? class (see _defer-image.scss) on the .defer-image element based off of
+        the aspect ratio of the image. If your aspect ratio is not represented, you can add an inline
+        padding-top style to the inner div equal to h / w * 100 (as shown below).
+    -->
+    <div class="defer-image">
+        <div data-class="main-img img-responsive" data-src="/images/rendering.jpg"
+            style="padding-top: 54%"></div>
     </div>
     <div class="container">
         <div class="row">
