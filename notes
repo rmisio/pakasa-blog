@@ -15,7 +15,7 @@ lib
 href="styles
 href="/pakasa-blog/styles
 8.) cp .tmp/styles/main.css dist/styles/
-9.) in main.css
+9.) in css and scss files
 -- a.) search and replace
 ---- ../bower_components/
 ---- ../lib/
