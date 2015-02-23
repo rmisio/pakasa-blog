@@ -5317,6 +5317,10 @@ figure {
 .index-main-container {
   max-width: 970px; }
 
+.main-img {
+    margin: 0 auto;
+}
+
 .blog-post-previews {
   padding-top: 25px; }
   .blog-post-previews article {
